@@ -34,11 +34,11 @@ The .pub file is your public key. Copy the contents of it and paste it into the 
 ssh -L <local_port>:<vm_public_ip>:<vm_port> <user>@<external_ip>
 ```
 Replace:
-  - <local_port> with the port you want to use on your local machine.
-  - <vm_public_ip> with your VM’s public IP.
-  - <vm_port> with the port on the VM you want to forward, usually port `80`
-  - <user> with your VM username, in our case `stack`
-  - <external_ip> with the VM’s external IP.
+  - `<local_port>` with the port you want to use on your local machine.
+  - `<vm_public_ip>` with your VM’s public IP.
+  - `<vm_port>` with the port on the VM you want to forward, usually port `80`
+  - `<user>` with your VM username, in our case `stack`
+  - `<external_ip>` with the VM’s external IP.
 
 3. you should be able to access `http://localhost:<local_port>` on your local machine and be prompted to login to the openstack dashboard. once logged in you should see an interface similar to this
 ![Openstack Dashboard](img/openstack-dashboard.png)
