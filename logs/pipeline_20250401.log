@@ -1,0 +1,101 @@
+===== Pipeline started at Tue Apr  1 01:50:00 UTC 2025 =====
+Step 1: Retrieving new token...
+Source file: ubuntu@10.10.0.146:/home/ubuntu/files/adminToken.txt
+Destination: ubuntu@127.0.0.1:/home/ubuntu/code/files/
+Private key: /home/ubuntu/.ssh/id_rsa_scp
+Step 2: Running Python script (/home/ubuntu/code/fetch_data.py)...
+TOKEN: e123e2c0b405613ac611e4f64fa0c491
+URL: http://10.10.0.146:7000/admin/analytics?token=e123e2c0b405613ac611e4f64fa0c491
+{"created":1743470688,"guid":"a7d37738f965a73849b544119cd6f44f4b9fd047092b743e50c04c5b855ed094","record_type":"user","username":"new_user"}
+{"assetId":"06f6fee7-8c4c-49d2-9bf1-24951ae406ef","channelId":"5","created":1743470703,"filename":"06f6fee7-8c4c-49d2-9bf1-24951ae406ef","mediaType":"ready","record_type":"photo","topicId":"12","username":"new_user"}
+
+Step 3: Uploading data to HDFS: /databag-dir/data_20250401.jsonl
+Step 4: Running Hadoop MapReduce job with output: /databag-dir/output_20250401
+2025-04-01 01:50:53,751 WARN streaming.StreamJob: -file option is deprecated, please use generic option -files instead.
+packageJobJar: [/home/ubuntu/code/mapper.py, /home/ubuntu/code/reducer.py, /tmp/hadoop-unjar18043088396724156295/] [] /tmp/streamjob9186846039813529198.jar tmpDir=null
+2025-04-01 01:51:06,617 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /10.0.0.17:8032
+2025-04-01 01:51:09,003 INFO client.DefaultNoHARMFailoverProxyProvider: Connecting to ResourceManager at /10.0.0.17:8032
+2025-04-01 01:51:12,074 INFO mapreduce.JobResourceUploader: Disabling Erasure Coding for path: /tmp/hadoop-yarn/staging/ubuntu/.staging/job_1743373251093_0002
+2025-04-01 01:51:16,463 INFO mapred.FileInputFormat: Total input files to process : 1
+2025-04-01 01:51:17,111 INFO mapreduce.JobSubmitter: number of splits:2
+2025-04-01 01:51:19,793 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1743373251093_0002
+2025-04-01 01:51:19,796 INFO mapreduce.JobSubmitter: Executing with tokens: []
+2025-04-01 01:51:21,818 INFO conf.Configuration: resource-types.xml not found
+2025-04-01 01:51:21,824 INFO resource.ResourceUtils: Unable to find 'resource-types.xml'.
+2025-04-01 01:51:22,740 INFO impl.YarnClientImpl: Submitted application application_1743373251093_0002
+2025-04-01 01:51:23,100 INFO mapreduce.Job: The url to track the job: http://hadoop-server:8088/proxy/application_1743373251093_0002/
+2025-04-01 01:51:23,114 INFO mapreduce.Job: Running job: job_1743373251093_0002
+2025-04-01 01:52:37,590 INFO mapreduce.Job: Job job_1743373251093_0002 running in uber mode : false
+2025-04-01 01:52:37,638 INFO mapreduce.Job:  map 0% reduce 0%
+2025-04-01 01:53:42,773 INFO mapreduce.Job:  map 50% reduce 0%
+2025-04-01 01:53:44,781 INFO mapreduce.Job:  map 100% reduce 0%
+2025-04-01 01:54:24,968 INFO mapreduce.Job:  map 100% reduce 100%
+2025-04-01 01:54:27,512 INFO mapreduce.Job: Job job_1743373251093_0002 completed successfully
+2025-04-01 01:54:28,889 INFO mapreduce.Job: Counters: 55
+        File System Counters
+                FILE: Number of bytes read=90
+                FILE: Number of bytes written=839441
+                FILE: Number of read operations=0
+                FILE: Number of large read operations=0
+                FILE: Number of write operations=0
+                HDFS: Number of bytes read=731
+                HDFS: Number of bytes written=78
+                HDFS: Number of read operations=11
+                HDFS: Number of large read operations=0
+                HDFS: Number of write operations=2
+                HDFS: Number of bytes read erasure-coded=0
+        Job Counters 
+                Killed map tasks=1
+                Launched map tasks=2
+                Launched reduce tasks=1
+                Data-local map tasks=2
+                Total time spent by all maps in occupied slots (ms)=120714
+                Total time spent by all reduces in occupied slots (ms)=38827
+                Total time spent by all map tasks (ms)=120714
+                Total time spent by all reduce tasks (ms)=38827
+                Total vcore-milliseconds taken by all map tasks=120714
+                Total vcore-milliseconds taken by all reduce tasks=38827
+                Total megabyte-milliseconds taken by all map tasks=123611136
+                Total megabyte-milliseconds taken by all reduce tasks=39758848
+        Map-Reduce Framework
+                Map input records=2
+                Map output records=3
+                Map output bytes=78
+                Map output materialized bytes=96
+                Input split bytes=210
+                Combine input records=0
+                Combine output records=0
+                Reduce input groups=3
+                Reduce shuffle bytes=96
+                Reduce input records=3
+                Reduce output records=3
+                Spilled Records=6
+                Shuffled Maps =2
+                Failed Shuffles=0
+                Merged Map outputs=2
+                GC time elapsed (ms)=1216
+                CPU time spent (ms)=29490
+                Physical memory (bytes) snapshot=762437632
+                Virtual memory (bytes) snapshot=8200040448
+                Total committed heap usage (bytes)=525336576
+                Peak Map Physical memory (bytes)=279838720
+                Peak Map Virtual memory (bytes)=2731626496
+                Peak Reduce Physical memory (bytes)=212262912
+                Peak Reduce Virtual memory (bytes)=2739253248
+        Shuffle Errors
+                BAD_ID=0
+                CONNECTION=0
+                IO_ERROR=0
+                WRONG_LENGTH=0
+                WRONG_MAP=0
+                WRONG_REDUCE=0
+        File Input Format Counters 
+                Bytes Read=521
+        File Output Format Counters 
+                Bytes Written=78
+2025-04-01 01:54:28,891 INFO streaming.StreamJob: Output directory: /databag-dir/output_20250401
+Step 5: Fetching output from HDFS to /home/ubuntu/code/files/output_local_20250401
+Step 6: Sending email with report...
+[('new_user', '1'), ('photo_count', '1'), ('photo_group', 'new_user', '06f6fee7-8c4c-49d2-9bf1-24951ae406ef')]
+Email sent successfully!
+===== Pipeline completed successfully at Tue Apr  1 01:54:59 UTC 2025 =====
