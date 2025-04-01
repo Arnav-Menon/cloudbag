@@ -28,8 +28,9 @@ def get_analytics(time_range="24h"):
     try:
         url = f"{DATABAG_BASE_URL}/admin/analytics?token={ACCESS_TOKEN}"
         response = requests.get(url)
+        date = datetime.today().strftime('%Y%m%d')
 
-        with open("files/data.jsonl", "w") as f:
+        with open(f"/home/ubuntu/code/files/data_{date}.jsonl", "w") as f:
             f.write(response.text)
 
     except Exception as e:

@@ -15,7 +15,7 @@ ADMIN_EMAIL = ["arnavmen@andrew.cmu.edu", "ssridha3@andrew.cmu.edu"]
 
 def get_report():
     today_date = datetime.today().strftime('%Y%m%d')
-    output_dir = f"files/output_local_{today_date}"
+    output_dir = f"/home/ubuntu/code/files/output_local_{today_date}"
     file_path = os.path.join(output_dir, "part-00000")
 
     parsed_data = []

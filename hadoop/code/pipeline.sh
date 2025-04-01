@@ -3,7 +3,7 @@
 DATE=$(date '+%Y%m%d')
 # Set up logging
 LOG_FILE="/home/ubuntu/logs/pipeline_${DATE}.log"
-exec > >(tee -a "$LOG_FILE") 2>&1
+exec >> "$LOG_FILE" 2>&1
 echo "===== Pipeline started at $(date) ====="
 
 BASE_DIR="/home/ubuntu/code"
@@ -13,7 +13,7 @@ FILES_DIR="$BASE_DIR/files"
 TOKEN_SCRIPT="$BASE_DIR/token.sh"
 PYTHON_PATH="/usr/bin/python3"
 PYTHON_SCRIPT="$BASE_DIR/fetch_data.py"
-DATA_FILE="$FILES_DIR/data.jsonl"
+DATA_FILE="$FILES_DIR/data_${DATE}.jsonl"
 EMAIL_SCRIPT="$BASE_DIR/send_email.py"
 
 # Function to log errors and exit
