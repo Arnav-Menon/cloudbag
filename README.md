@@ -4,7 +4,7 @@
 
 ## GLOBAL NOTES:
 As you're going through with the setup, keep the following in mind:
-- whereever you see an IP double check it matches your setup/
+- wherever you see an IP double check it matches your setup/
 - Update `databag/local.conf` with an admin password
 
 
@@ -208,3 +208,5 @@ If running into this issue, you need to run ```source /opt/stack/devstack/openrc
 
     ping -c 4 google.com (verify DNS resolution now works)
     ```
+  4. How to access Databag and Hadoop VMs via floating IP 
+    - Openstack assigns an internal basic and floating ip to its VMs so you have to modify the ens5 subnet in `local.conf` to access the floating ips.
