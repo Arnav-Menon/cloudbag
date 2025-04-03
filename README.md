@@ -3,7 +3,7 @@
 # Arnav Menon (arnavmen) & Sanjeev Sridhar (ssridha3)
 
 # Link to Video
-[Box Video](https://cmu.box.com/s/q1mniyxarsl4sel367ayv8dkcin5slm7)
+[Box Video](https://drive.google.com/file/d/1JMpCjtW4liyMGmffH5-A-IPkXF9z8tCD/view?usp=drive_link)
 
 ## GLOBAL NOTES:
 As you're going through with the setup, keep the following in mind:
