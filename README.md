@@ -2,6 +2,9 @@
 
 # Arnav Menon (arnavmen) & Sanjeev Sridhar (ssridha3)
 
+# Link to Video
+[Box Video](https://cmu.box.com/s/q1mniyxarsl4sel367ayv8dkcin5slm7)
+
 ## GLOBAL NOTES:
 As you're going through with the setup, keep the following in mind:
 - wherever you see an IP double check it matches your setup/
