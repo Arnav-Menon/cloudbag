@@ -1,7 +1,7 @@
 # Arnav Menon (arnavmen)
 
 # Link to Video
-[Box Video](https://drive.google.com/file/d/1JMpCjtW4liyMGmffH5-A-IPkXF9z8tCD/view?usp=drive_link)
+[Google Drive Video](https://drive.google.com/file/d/1JMpCjtW4liyMGmffH5-A-IPkXF9z8tCD/view?usp=drive_link)
 
 ## GLOBAL NOTES:
 As you're going through with the setup, keep the following in mind:
