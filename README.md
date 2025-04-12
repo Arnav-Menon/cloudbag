@@ -1,4 +1,4 @@
-# Arnav Menon (arnavmen) & Sanjeev Sridhar (ssridha3)
+# Arnav Menon (arnavmen)
 
 # Link to Video
 [Box Video](https://drive.google.com/file/d/1JMpCjtW4liyMGmffH5-A-IPkXF9z8tCD/view?usp=drive_link)
